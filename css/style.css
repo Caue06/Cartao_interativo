@@ -1,0 +1,16 @@
+/* 1. Reset CSS e Estilos Globais*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --cor-fundo: #f0f2f5;
+    --cor-branco: #ffffff;
+    --cor-texto-primario: #1c1e21;
+    --cor-texto-secundario: #606760;
+    --cor-borda: #dcdfe3;
+    --cor-acento: #007bff;
+}
+
