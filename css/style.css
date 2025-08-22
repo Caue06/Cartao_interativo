@@ -1,9 +1,11 @@
-/* 1. Reset CSS e Estilos Globais*/
+    /* 1. Reset CSS e Estilos Globais*/
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+    /*Definição das variaveis globais*/
 
 :root{
     --cor-fundo: #f0f2f5;
@@ -15,7 +17,7 @@
 }
 
 body{
-    font-family: -aple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     background-color: var(--cor-fundo);
 
     /*1. Centralizando o componente na pagina para a visualização */
@@ -32,9 +34,11 @@ body{
     background-color: var(--cor-branco);
     border-radius: 16px;
     box-shadow:  0 8px 24px rgba(0, 0, 0, 0.1);
-    width:320px;
+    width: 320px;
+
     /* Aqui que começa a mágica da transformação */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
     overflow: hidden;
     text-align: center;
 }
@@ -55,7 +59,7 @@ body{
 
 .card_image{
     width: 100%;
-    height: 100%;
+    height: 200px;
     object-fit: cover; /*Cobre todo o container mantendo a proporção/ Garante qua a imagem cubra o espaço sem distorcer*/
 }
 
@@ -72,18 +76,20 @@ body{
 }
 
 .card_title {
-    font-size: 1.0rem; /*= 16px*/
+    font-size: 1.0rem; /*1rem = 16px*/
     color: var(--cor-texto-secundario);
-    margin-bottom: 24px;
+    margin-bottom: 16px;
 }
 
     /*6. Estilizar os icones das Redes Socias utilizando Flexbox*/
 
 .card_social{
-    display: flex; /*Atica o flexbox*/
+    display: flex; /*Ativa o flexbox*/
     justify-content: center; /*Centraliza os itens no eixo principal (horizontal)*/
     gap: 16px; /*Espaçamento entre os icones sociais*/
 }
+
+    /*7. Estilo dos icones sociais utilizando o flexbox*/
 
 .card_social a {
     display: flex;
@@ -99,3 +105,18 @@ body{
     font-weight: bold;
     transition: background-color 0.3s ease, color 0.3 ease; /*Transição suave para a cor ao passar o mouse*/
 }
+
+.card_social a:hover{
+    background-color: var(--cor-acento);
+    color: var(--cor-branco);
+    border-color: var(--cor-acento);
+}
+
+    /*8. Design responsivo (Primeira Media Query)*/
+
+@media(max-width:400px){
+    .card{
+        width: 90%;/*O card ocupara 90% da largura da tela*/
+    }
+}
+
